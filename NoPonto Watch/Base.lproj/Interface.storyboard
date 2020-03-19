@@ -18,7 +18,7 @@
                                     <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
                                     <calendarUnit key="units" minute="YES" second="YES"/>
                                 </timer>
-                                <button width="1" alignment="left" title="Button" id="dYV-Gn-Ei1">
+                                <button width="1" alignment="left" title="iniciar timer" id="dYV-Gn-Ei1">
                                     <connections>
                                         <action selector="onTimerButton" destination="AgC-eL-Hgc" id="j9T-ql-CcO"/>
                                     </connections>
