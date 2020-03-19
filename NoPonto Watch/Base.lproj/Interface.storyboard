@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="15705" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch38"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="15501"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller spacing="10" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="NoPonto_Watch" customModuleProvider="target">
+                    <items>
+                        <group width="1" alignment="left" layout="vertical" spacing="10" id="i8w-63-FjG">
+                            <items>
+                                <timer width="88" height="26" alignment="center" textAlignment="center" id="MYs-xe-77V">
+                                    <color key="textColor" red="0.0" green="0.50980392159999999" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="font" style="UICTFontTextStyleTitle0"/>
+                                    <calendarUnit key="units" minute="YES" second="YES"/>
+                                </timer>
+                                <button width="1" alignment="left" title="Button" id="dYV-Gn-Ei1">
+                                    <connections>
+                                        <action selector="onTimerButton" destination="AgC-eL-Hgc" id="j9T-ql-CcO"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="bar-zR-d8f" userLabel="text group">
+                            <items>
+                                <label alignment="center" text="total: 0.1 kg" id="wdS-uV-lDp"/>
+                                <group width="1" alignment="left" spacing="15" id="5Hx-qD-Qkd">
+                                    <items>
+                                        <button alignment="center" backgroundImage="minus" id="ZnR-L4-qd6">
+                                            <connections>
+                                                <action selector="onMinusButton" destination="AgC-eL-Hgc" id="3By-W0-xZJ"/>
+                                            </connections>
+                                        </button>
+                                        <button alignment="center" backgroundImage="plus" id="cCx-mP-VCg">
+                                            <connections>
+                                                <action selector="onPlusButton" destination="AgC-eL-Hgc" id="EPn-yf-Qbm"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
+                                <label alignment="center" text="Cru" id="GNG-XW-MJZ"/>
+                                <slider width="1" alignment="left" maximum="3" steps="3" id="DaK-M7-JNL">
+                                    <connections>
+                                        <action selector="onTempChange:" destination="AgC-eL-Hgc" id="B0O-2L-nRY"/>
+                                    </connections>
+                                </slider>
+                            </items>
+                        </group>
+                        <group width="1" alignment="left" layout="vertical" id="hvh-gk-ToM">
+                            <items>
+                                <label alignment="center" text="Total (kg)" id="O8H-AT-qiu"/>
+                                <picker height="55" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="4d7-w7-VHo">
+                                    <connections>
+                                        <action selector="onWeightChange:" destination="AgC-eL-Hgc" id="Tj7-Ib-pGd"/>
+                                    </connections>
+                                </picker>
+                                <label alignment="center" text="Ponto da carne" id="cR9-Zb-a3s"/>
+                                <picker width="1" height="60" alignment="left" focusStyle="stack" indicatorMode="shownWhileFocused" id="gU2-Un-TXg">
+                                    <connections>
+                                        <action selector="onTemperatureChange:" destination="AgC-eL-Hgc" id="svm-IX-9GB"/>
+                                    </connections>
+                                </picker>
+                            </items>
+                        </group>
+                        <switch width="1" alignment="left" title="Imagens" id="bQU-ey-xs2">
+                            <connections>
+                                <action selector="onModeChange:" destination="AgC-eL-Hgc" id="yt2-Kp-og6"/>
+                            </connections>
+                        </switch>
+                    </items>
+                    <connections>
+                        <outlet property="btTimer" destination="dYV-Gn-Ei1" id="9vP-ZA-GMO"/>
+                        <outlet property="imageGroup" destination="hvh-gk-ToM" id="7Zm-lp-gXB"/>
+                        <outlet property="lbCook" destination="GNG-XW-MJZ" id="fbs-2F-CUe"/>
+                        <outlet property="lbTemperature" destination="cR9-Zb-a3s" id="5Za-lp-gVs"/>
+                        <outlet property="lbWeight" destination="wdS-uV-lDp" id="uX4-Zq-ZfF"/>
+                        <outlet property="slider" destination="DaK-M7-JNL" id="dqz-XU-2ub"/>
+                        <outlet property="temperaturePicker" destination="gU2-Un-TXg" id="3ai-RT-8GM"/>
+                        <outlet property="textGroup" destination="bar-zR-d8f" id="YW3-C4-rNe"/>
+                        <outlet property="timer" destination="MYs-xe-77V" id="qZu-2C-iLF"/>
+                        <outlet property="weightPicker" destination="4d7-w7-VHo" id="oF8-jZ-eOn"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="34" y="31"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="minus" width="40" height="40"/>
+        <image name="plus" width="40" height="40"/>
+    </resources>
+</document>
